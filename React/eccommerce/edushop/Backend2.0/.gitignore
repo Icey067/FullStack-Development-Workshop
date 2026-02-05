@@ -1,0 +1,4 @@
+node_modules/
+*.log
+output.txt
+output2.txt

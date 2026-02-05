@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  /* Deep, modern gradient */
+  background-image: linear-gradient(to bottom right, #240b36, #c31432);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Main Game Container - Glassmorphism */
+main {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+/* Active Player Styling */
+.player--active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.player:not(.player--active) {
+  background-color: transparent;
+}
+
+/* Typography */
+.name {
+  position: relative;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #eee; /* Light text for dark bg */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.score {
+  font-size: 80px;
+  font-weight: 200;
+  color: #ff3b6f; /* brighter pink/red */
+  margin-bottom: auto;
+  line-height: 1;
+}
+
+/* Current Score Box */
+.current {
+  background-color: #c7365f;
+  opacity: 1; 
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.current-score {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+/* Buttons */
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  padding: 14px 35px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+.btn:hover {
+  background: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  transform: translateX(-50%) translateY(-3px);
+}
+
+.btn:active {
+  transform: translateX(-50%) translateY(1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn--new {
+  top: 45px;
+}
+
+.btn--roll {
+  top: 400px;
+}
+
+.btn--hold {
+  top: 470px;
+}
+
+/* Dice */
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 170px;
+  transform: translateX(-50%);
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transition: transform 0.3s ease-out;
+}
+
+.dice:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Winner State */
+.player--winner {
+  background-color: #2f2f2f !important;
+  background-image: linear-gradient(to top left, #333, #444);
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+.player--winner .score {
+  color: #c7365f;
+}
+
+/* Media Queries for better responsiveness if needed (though fixed layout makes it hard) */
+@media (max-width: 1100px) {
+    main {
+        width: 95%;
+    }
+}

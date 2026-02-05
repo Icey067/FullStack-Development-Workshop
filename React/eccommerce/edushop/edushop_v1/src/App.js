@@ -1,0 +1,29 @@
+import React, { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import './App.css';
+import Header from "./Common/Header";
+
+function App() {
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch('/a.json')
+      const data = await res.json()
+      setData(data)
+      console.log(data)
+    }
+    fetchData()
+  }, []) 
+  return (
+    <div className="App">
+        <Header></Header>
+        <Outlet context={[
+          data,
+          setData
+        ]}></Outlet>
+    </div>
+  );
+}
+
+export default App;
