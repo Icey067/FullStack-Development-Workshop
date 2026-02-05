@@ -1,0 +1,87 @@
+* {
+    background-color: rgb(92, 4, 97);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 300px 85px;
+    width: 80%;
+    height: 80%;
+    border: 15px solid rgb(8, 45, 1);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: darkgreen;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 60px 60px 10px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgb(243, 3, 3);
+    animation: changeColor 2s infinite
+}
+
+@keyframes changeColor {
+			from {
+				background-color: rgb(0, 0, 0);
+			}
+
+			to {
+				background-color: green;
+			}
+		}
+
+#font {
+    font-size: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(61, 0, 36);
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: darkgreen;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 60px 60px 10px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgb(243, 3, 3);
+    animation: 
+}
+
+#one{
+    animation: float2 2s ease-in-out infinite alternate;
+}
+
+#two{
+    /* align-self: self-start; */
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes float {
+  0%{
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(20px); 
+  }
+
+}
+@keyframes float2 {
+  0%{
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px); 
+  }
+}

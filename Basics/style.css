@@ -1,0 +1,103 @@
+h2 {
+            color:blue;
+        }
+
+
+h1 {
+    color:yellow;
+    background-color: black;
+    border: 10px solid rgb(220, 223, 17);
+}
+
+/* Universal selector */
+* {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(108, 103, 103);
+}
+
+/* id selector */
+#a{
+    border: 2px solid rgb(16, 127, 4);
+    padding: 10px
+}
+
+/* class selector */
+.a{
+    color:blue;
+    background-color: lightblue;
+}
+
+.c {
+    font-size: 20px;
+    color: green;
+}
+
+#dih {
+    font-size: 30px;
+    color: orange;
+}
+
+/* pseudo Elements */
+li::first-letter {
+    font-size: 100%;
+    color: red;
+}
+li::before {
+    content: "--> ";
+    color: green;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+#space {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+}
+
+
+p {
+    color: white;
+    font-size: large;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.fixed {
+    position: fixed;
+    top: 500px;
+    height: 100px;
+    left: 100px;
+}
+
+.absolute {
+    position: absolute;
+    top: 700px;
+    height: 100px;
+    left: 100px;
+}
+
+.relative {
+    position: relative;
+    top: 100px;
+    left: 300px;
+}
